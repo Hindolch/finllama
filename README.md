@@ -1,6 +1,6 @@
 ### 🦙 Finetuning LLaMA 3 (8B) on Finance Data with Unsloth
 
-This repo contains the Colab/Kaggle notebook, evaluation metrics, and output from finetuning [`unsloth/llama-3-8b-bnb-4bit`](https://huggingface.co/unsloth/llama-3-8b-bnb-4bit) on the [`finance-alpaca`](https://huggingface.co/datasets/gbharti/finance-alpaca) dataset using **LoRA** via **Unsloth**.
+This repo contains the Kaggle notebook, evaluation metrics, and output from finetuning [`unsloth/llama-3-8b-bnb-4bit`](https://huggingface.co/unsloth/llama-3-8b-bnb-4bit) on the [`finance-alpaca`](https://huggingface.co/datasets/gbharti/finance-alpaca) dataset using **LoRA** via **Unsloth**.
 
 ---
 
