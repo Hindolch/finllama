@@ -1,4 +1,4 @@
-### 🦙 Finetuning LLaMA 3 (8B) on Finance Data with Unsloth
+# 🦙 FinLLama — Finetuning LLaMA 3 (8B) on Financial QnA with Unsloth
 
 This repo contains the Kaggle notebook, evaluation metrics, and output from finetuning [`unsloth/llama-3-8b-bnb-4bit`](https://huggingface.co/unsloth/llama-3-8b-bnb-4bit) on the [`finance-alpaca`](https://huggingface.co/datasets/gbharti/finance-alpaca) dataset using **LoRA** via **Unsloth**.
 
@@ -16,15 +16,11 @@ This repo contains the Kaggle notebook, evaluation metrics, and output from fine
 | 1200 | 2.2173        | 2.11200         |
 | 1400 | 2.1825        | **2.06946**     |
 
-<img width="640" height="480" alt="loss_plot" src="https://github.com/user-attachments/assets/19971e07-07f6-4e05-9b80-ea5076e206d0" />
-
+![Training Curve](loss_plot.png)
 
 * 🔢 **Final Validation Loss:** \~**2.07**
-* ⏱️ **Total Training Time:** \~2.5 hours
-* 📦 **Trained LoRA Parameters:** \~41M (0.52% of full model)
-
-> ⚠️ **Note:** Due to storage limitations on the free Colab/Kaggle environment, the full merged 16-bit model could not be pushed to the Hugging Face Hub.
-> 🔧 I have pushed the **LoRA adapter only**, which can be loaded with the base model.
+* ⏱️ **Total Training Time:** \~2.5 hours (on free Kaggle GPU)
+* 📦 **Trainable Parameters (LoRA):** \~41M / 8B (\~0.52%)
 
 ---
 
@@ -32,6 +28,9 @@ This repo contains the Kaggle notebook, evaluation metrics, and output from fine
 
 * **Base Model**: [`unsloth/llama-3-8b-bnb-4bit`](https://huggingface.co/unsloth/llama-3-8b-bnb-4bit)
 * **LoRA Adapter**: [`kenzi123/finllama-lora`](https://huggingface.co/kenzi123/finllama-lora)
+
+> ⚠️ Due to storage limitations on Colab/Kaggle, the **merged 16-bit model** could not be pushed.
+> ✅ The **LoRA adapter** is publicly available and can be loaded with the base model.
 
 ---
 
@@ -61,12 +60,23 @@ print(tokenizer.decode(outputs[0]))
 
 ---
 
+## 💻 Hosting Note
+
+> ⚠️ **Why no live demo?**
+> I attempted to deploy a Gradio demo via Hugging Face Spaces, but it failed due to **no GPU support** on the free tier.
+
+```
+RuntimeError: Found no NVIDIA driver on your system.
+```
+
+As I currently don't have the budget for paid GPU or storage resources, I’ve only shared the **LoRA adapter** and not the full merged model.
+
+---
+
 ## 🧑‍💻 Author
 
 **Hindol R. Choudhury**
 *MLOps • LLM Infra • NLP • Applied AI*
-📫 [LinkedIn](https://www.linkedin.com/in/hindol-choudhury/)
-
+📫 [LinkedIn →](https://www.linkedin.com/in/hindol-choudhury/)
 
 ---
-
