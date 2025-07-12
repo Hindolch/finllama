@@ -60,3 +60,13 @@ print(tokenizer.decode(outputs[0]))
 ```
 
 ---
+
+## 🧑‍💻 Author
+
+**Hindol R. Choudhury**
+*MLOps • LLM Infra • NLP • Applied AI*
+📫 [LinkedIn](https://www.linkedin.com/in/hindol-choudhury/)
+
+
+---
+
